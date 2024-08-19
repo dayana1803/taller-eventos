@@ -8,5 +8,8 @@ function mostrarAlerta() {
     document.addEventListener('DOMContentLoaded', function() {
         const boton = document.querySelector('button');
         const contenedorDiv = document.querySelector('.boton-container');
-        contenedorDiv.addEventListener('click', mostrarAlertaDiv);
+        contenedorDiv.addEventListener('click', function(event) {
+        mostrarAlerta();
+        event.stopPropagation(); 
+    });
     });
